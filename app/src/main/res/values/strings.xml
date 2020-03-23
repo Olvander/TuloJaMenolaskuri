@@ -3,4 +3,6 @@
     <string name="addNew">Lisää tulo\ntai meno</string>
     <string name="monthly">Kuukausittaiset\ntulot ja menot</string>
     <string name="yearly">Vuosittaiset\ntulot ja menot</string>
+    <string name="cancel">Peruuta</string>
+    <string name="save">Tallenna</string>
 </resources>

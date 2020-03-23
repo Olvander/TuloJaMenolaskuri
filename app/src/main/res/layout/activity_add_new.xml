@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <Button
+        style="@style/btn"
+        android:onClick="onCancelPressed"
+        android:background="#ccc"
+        android:text="@string/cancel"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="15dp"
+        android:layout_weight="1" />
+
+    <Button
+        style="@style/btn"
+        android:onClick="onSavePressed"
+        android:text="@string/save"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="15dp"
+        android:layout_weight="1" />
+
 
 </LinearLayout>
