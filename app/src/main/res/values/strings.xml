@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Tulo- ja menolaskuri</string>
+    <string name="addNew">Lisää tulo\ntai meno</string>
+    <string name="monthly">Kuukausittaiset\ntulot ja menot</string>
+    <string name="yearly">Vuosittaiset\ntulot ja menot</string>
 </resources>
