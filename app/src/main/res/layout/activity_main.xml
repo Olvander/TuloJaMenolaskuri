@@ -6,21 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
         android:id="@+id/addNew"
         style="@style/btn"
+        android:onClick="onAddNewPressed"
         android:text="@string/addNew"
         android:layout_above="@+id/monthly"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"/>
 
-    <TextView
+    <Button
         android:id="@+id/monthly"
         style="@style/btn"
         android:text="@string/monthly"
         android:layout_centerInParent="true"/>
 
-    <TextView
+    <Button
         android:id="@+id/yearly"
         style="@style/btn"
         android:text="@string/yearly"
