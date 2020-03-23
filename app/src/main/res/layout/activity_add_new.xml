@@ -9,6 +9,28 @@
         style="@style/addEntryTitle"
         android:text="@string/addEntry" />
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            style="@style/radioBtn"
+            android:text="@string/income"/>
+
+        <RadioButton
+            style="@style/radioBtn"
+            android:text="@string/expense" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/enteredSum"
+        style="@style/sumEditText"
+        android:hint="@string/enterSum" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
