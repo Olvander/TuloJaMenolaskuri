@@ -5,4 +5,5 @@
     <string name="yearly">Vuosittaiset\ntulot ja menot</string>
     <string name="cancel">Peruuta</string>
     <string name="save">Tallenna</string>
+    <string name="addEntry">Lisää tapahtuma</string>
 </resources>

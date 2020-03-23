@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        style="@style/addNewBtn"
-        android:onClick="onCancelPressed"
-        android:background="#ccc"
-        android:text="@string/cancel" />
+    <TextView
+        style="@style/addEntryTitle"
+        android:text="@string/addEntry" />
 
-    <Button
-        style="@style/addNewBtn"
-        android:onClick="onSavePressed"
-        android:text="@string/save" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <Button
+            style="@style/addNewBtn"
+            android:onClick="onCancelPressed"
+            android:background="#ccc"
+            android:text="@string/cancel" />
+
+        <Button
+            style="@style/addNewBtn"
+            android:onClick="onSavePressed"
+            android:text="@string/save" />
+
+    </LinearLayout>
 
 </LinearLayout>
