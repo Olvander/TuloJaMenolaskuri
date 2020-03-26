@@ -31,6 +31,18 @@
         style="@style/sumEditText"
         android:hint="@string/enterSum" />
 
+    <TextView
+        style="@style/datePickerText"
+        android:text="@string/chooseDate"
+        android:onClick="onSetDatePressed"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        style="@style/datePickerText"
+        android:id="@+id/dateText"
+        android:onClick="onSetDatePressed"
+        android:layout_marginTop="15dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

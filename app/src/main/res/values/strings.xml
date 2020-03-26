@@ -9,5 +9,6 @@
     <string name="income">Tulo</string>
     <string name="expense">Meno</string>
     <string name="enterSum">Syötä summa (€)</string>
+    <string name="chooseDate">Valitse päivämäärä</string>
 
 </resources>
