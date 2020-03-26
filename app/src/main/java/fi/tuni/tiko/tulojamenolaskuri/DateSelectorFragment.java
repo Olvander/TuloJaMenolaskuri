@@ -87,13 +87,14 @@ public class DateSelectorFragment extends DialogFragment implements
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         this.datePicker = view;
-        month += 1;
         Calendar c = Calendar.getInstance();
         c.set(year, month, dayOfMonth);
 
+        month += 1;
         String weekDay = c.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT,
                 Locale.getDefault());
         String formattedDate = String.format("%s %s.%s.%s", weekDay, dayOfMonth, month, year);
         this.dateText.setText(formattedDate);
+        ((AddNewActivity) context).setDate(c);
     }
 }
