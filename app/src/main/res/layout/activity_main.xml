@@ -17,6 +17,7 @@
 
     <Button
         android:id="@+id/monthly"
+        android:onClick="onMonthlyViewPressed"
         style="@style/btn"
         android:text="@string/monthly"
         android:layout_centerInParent="true"/>

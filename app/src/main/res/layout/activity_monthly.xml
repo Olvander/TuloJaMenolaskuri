@@ -1,8 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.RecyclerView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/monthlyRecyclerView">
+    android:orientation="vertical">
 
-</android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:onClick="previousMonthPressed"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/monthSwitcher"
+            android:textSize="20sp"
+            android:text="@string/leftArrow" />
+
+        <TextView
+            android:id="@+id/monthSwitcher"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:onClick="nextMonthPressed"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/monthSwitcher"
+            android:textSize="20sp"
+            android:text="@string/rightArrow" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/yearSwitcher"
+            android:textSize="20sp"
+            android:text="@string/leftArrow"
+            android:onClick="previousYearPressed"
+            android:layout_below="@+id/monthSwitcher" />
+
+        <TextView
+            android:id="@+id/yearSwitcher"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_below="@+id/monthSwitcher" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/yearSwitcher"
+            android:textSize="20sp"
+            android:text="@string/rightArrow"
+            android:onClick="nextYearPressed"
+            android:layout_below="@+id/monthSwitcher" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/monthlyTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="30dp"
+        android:text="Yhteensä: 52€"
+        android:textSize="20sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/monthlyRecyclerView">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

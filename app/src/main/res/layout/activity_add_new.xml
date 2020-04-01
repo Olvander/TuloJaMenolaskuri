@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="15dp"
         android:orientation="vertical">
 
         <RadioButton
@@ -30,6 +30,11 @@
     </RadioGroup>
 
     <EditText
+        android:id="@+id/description"
+        style="@style/description"
+        android:hint="@string/descriptionHint" />
+
+    <EditText
         android:id="@+id/enteredSum"
         style="@style/sumEditText"
         android:hint="@string/enterSum" />
@@ -38,13 +43,13 @@
         style="@style/datePickerText"
         android:text="@string/chooseDate"
         android:onClick="onSetDatePressed"
-        android:layout_marginTop="35dp" />
+        android:layout_marginTop="10dp" />
 
     <TextView
         style="@style/datePickerText"
         android:id="@+id/dateText"
         android:onClick="onSetDatePressed"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="10dp" />
 
     <LinearLayout
         android:layout_width="match_parent"

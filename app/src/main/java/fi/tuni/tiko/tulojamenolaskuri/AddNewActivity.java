@@ -37,11 +37,15 @@ public class AddNewActivity extends AppCompatActivity {
 
     private EditText enteredSum;
 
+    private EditText description;
+
     private RadioGroup radioGroup;
 
     private Calendar date;
 
     private boolean sumOk;
+
+    private boolean descriptionOk;
 
     private boolean entryTypeOk;
 
@@ -66,6 +70,9 @@ public class AddNewActivity extends AppCompatActivity {
         this.dateText = findViewById(R.id.dateText);
         dateText.setText(getFormattedDate());
 
+        this.description = findViewById(R.id.description);
+        addListenerForDescription();
+
         this.radioGroup = findViewById(R.id.radioGroup);
         addListenerForRadioGroup();
     }
@@ -75,19 +82,38 @@ public class AddNewActivity extends AppCompatActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (v.getText().toString().contains(".")) {
-                    if (v.getText().length() > 2) {
+                    if (v.getText().toString().length() > 2) {
                         setSumOk(true);
                     } else {
                         setSumOk(false);
                     }
                 } else {
-                    if (v.getText().length() > 0) {
+                    if (v.getText().toString().length() > 0) {
                         setSumOk(true);
                     } else {
                         setSumOk(false);
                     }
                 }
-                if (isSumOk() && isEntryTypeOk()) {
+                if (isSumOk() && isEntryTypeOk() && isDescriptionOk()) {
+                    enableSaveButton();
+                } else {
+                    disableSaveButton();
+                }
+                return false;
+            }
+        });
+    }
+
+    public void addListenerForDescription() {
+        description.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (description.getText().toString().length() > 1) {
+                        setDescriptionOk(true);
+                    } else {
+                        setDescriptionOk(false);
+                    }
+                if (isSumOk() && isEntryTypeOk() && isDescriptionOk()) {
                     enableSaveButton();
                 } else {
                     disableSaveButton();
@@ -104,7 +130,7 @@ public class AddNewActivity extends AppCompatActivity {
                 setEntryTypeOk(true);
                 RadioButton rButton = group.findViewById(checkedId);
                 entryType = rButton.getText().toString();
-                if (isSumOk()) {
+                if (isSumOk() && isDescriptionOk()) {
                     enableSaveButton();
                 }
             }
@@ -125,6 +151,14 @@ public class AddNewActivity extends AppCompatActivity {
 
     public boolean isSumOk() {
         return this.sumOk;
+    }
+
+    public boolean isDescriptionOk() {
+        return descriptionOk;
+    }
+
+    public void setDescriptionOk(boolean b) {
+        this.descriptionOk = b;
     }
 
     public boolean isEntryTypeOk() {
@@ -171,7 +205,7 @@ public class AddNewActivity extends AppCompatActivity {
 
     public void onSavePressed(View v) {
 
-        if (isSumOk() && isEntryTypeOk()) {
+        if (isSumOk() && isEntryTypeOk() && isDescriptionOk()) {
             String text = "Tapahtuma tallennettu";
             Toast.makeText(this, text, Toast.LENGTH_LONG).show();
         }

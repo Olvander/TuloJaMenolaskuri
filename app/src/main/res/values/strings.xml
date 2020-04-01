@@ -10,5 +10,8 @@
     <string name="expense">Meno</string>
     <string name="enterSum">Syötä summa (€)</string>
     <string name="chooseDate">Valitse päivämäärä</string>
+    <string name="leftArrow">&lt;</string>
+    <string name="rightArrow">&gt;</string>
+    <string name="descriptionHint">Tapahtuman kuvaus\n(ainakin 2 merkkiä)</string>
 
 </resources>
