@@ -14,7 +14,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 /**
- * This class is for showing a DAtePickerDialog fragment.
+ * This class is for showing a DatePickerDialog fragment.
  */
 public class DateSelectorFragment extends DialogFragment implements
         DatePickerDialog.OnDateSetListener  {
@@ -85,7 +85,8 @@ public class DateSelectorFragment extends DialogFragment implements
      * @param dayOfMonth    The selected day
      */
     @Override
-    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+    public void onDateSet(DatePicker view, int year, int month,
+                          int dayOfMonth) {
         this.datePicker = view;
         Calendar c = Calendar.getInstance();
         c.set(year, month, dayOfMonth);
@@ -93,7 +94,8 @@ public class DateSelectorFragment extends DialogFragment implements
         month += 1;
         String weekDay = c.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT,
                 Locale.getDefault());
-        String formattedDate = String.format("%s %s.%s.%s", weekDay, dayOfMonth, month, year);
+        String formattedDate = String.format("%s %s.%s.%s", weekDay, dayOfMonth,
+                month, year);
         this.dateText.setText(formattedDate);
         ((AddNewActivity) context).setDate(c);
     }

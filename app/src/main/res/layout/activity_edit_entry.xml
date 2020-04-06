@@ -5,9 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        style="@style/entryTitle"
-        android:text="@string/addEntry" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/editEntry"
+            style="@style/entryTitle"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/editEntry" />
+
+        <Button
+            android:onClick="removeEntry"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:drawableEnd="@android:drawable/ic_delete"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
 
     <RadioGroup
         android:id="@+id/radioGroup"
