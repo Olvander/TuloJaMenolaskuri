@@ -99,7 +99,6 @@ public class YearlyViewActivity extends AppCompatActivity implements Runnable {
         setYear();
         iterateSums();
 
-        //get bounds
         setContentView(R.layout.activity_yearly);
 
         yearSwitcher = findViewById(R.id.yearSwitcher);
@@ -107,7 +106,6 @@ public class YearlyViewActivity extends AppCompatActivity implements Runnable {
         yearSwitcher.setText(yearText);
         addTextChangeListenerOn(yearSwitcher);
 
-        // initializeTheMonthsList()
         months.add(findViewById(R.id.january));
         months.add(findViewById(R.id.february));
         months.add(findViewById(R.id.march));
@@ -123,7 +121,6 @@ public class YearlyViewActivity extends AppCompatActivity implements Runnable {
 
         layout = findViewById(R.id.barGraphView);
 
-        // initializeMonthlySumsList()
         monthlySums.add((TextView) findViewById(R.id.janSum));
         monthlySums.add((TextView) findViewById(R.id.febSum));
         monthlySums.add((TextView) findViewById(R.id.marSum));
@@ -138,19 +135,6 @@ public class YearlyViewActivity extends AppCompatActivity implements Runnable {
         monthlySums.add((TextView) findViewById(R.id.decSum));
 
         layout.post(this);
-
-        /*
-        View barChartBase = findViewById(R.id.barChartBase);
-        BarDrawableView bar1 = new BarDrawableView(this, null);
-//        bar1.onDraw(new Canvas(barChartBase));
-
-        barChartBase.setBackground(bar1.getBarDrawable());
-        bar1.invalidate();
-        //Canvas canvas = new Canvas();
-        //bar1.draw(canvas);
-
-        //setContentView(bar1);
-*/
     }
 
     /**
