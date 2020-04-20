@@ -16,9 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddNewActivity"></activity>
-        <activity android:name=".MonthlyViewActivity"></activity>
-        <activity android:name=".EditEntryActivity"></activity>
+        <activity android:name=".AddNewActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".MonthlyViewActivity"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name=".EditEntryActivity"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name=".YearlyViewActivity"
+                  android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

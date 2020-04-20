@@ -24,6 +24,7 @@
 
     <Button
         android:id="@+id/yearly"
+        android:onClick="onYearlyViewPressed"
         style="@style/btn"
         android:text="@string/yearly"
         android:layout_below="@+id/monthly"

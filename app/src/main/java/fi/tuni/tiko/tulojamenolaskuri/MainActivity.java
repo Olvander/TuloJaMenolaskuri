@@ -42,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Proceeds to YearlyViewActivity when a button is pressed.
+     * @param v The yearly view button
+     */
+    public void onYearlyViewPressed(View v) {
+        Intent i = new Intent(this, YearlyViewActivity.class);
+        startActivity(i);
+    }
+
+
+    /**
      * Force exit app on back pressed instead of going back
      * to previous activity
      */

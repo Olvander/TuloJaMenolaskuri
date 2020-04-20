@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:onClick="previousYearPressed"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="45dp"
+            android:textSize="26sp"
+            android:text="@string/leftArrow" />
+
+        <TextView
+            android:id="@+id/yearSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            style="@style/entryTitle" />
+
+        <TextView
+            android:onClick="nextYearPressed"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="45dp"
+            android:textSize="26sp"
+            android:text="@string/rightArrow" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/barGraphView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" >
+
+        <View
+            android:id="@+id/january"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#0075c0" />
+
+        <View
+            android:id="@+id/february"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#0075c0"/>
+
+        <View
+            android:id="@+id/march"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#0075c0"/>
+
+        <View
+            android:id="@+id/april"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#0075c0"/>
+
+        <View
+            android:id="@+id/may"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#0075c0"/>
+
+        <View
+            android:id="@+id/june"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#0075c0"/>
+
+        <View
+            android:id="@+id/july"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#0075c0"/>
+
+        <View
+            android:id="@+id/august"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#0075c0"/>
+
+        <View
+            android:id="@+id/september"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#0075c0"/>
+
+        <View
+            android:id="@+id/october"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#0075c0"/>
+
+        <View
+            android:id="@+id/november"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="#0075c0"/>
+
+        <View
+            android:id="@+id/december"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#0075c0"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Tammi" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Helmi"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Maalis"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Huhti"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Touko"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Kesä"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Heinä"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Elo"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Syys"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Loka"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Marras"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Joulu"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.7"
+        android:layout_marginBottom="7dp">
+
+        <TextView
+            android:id="@+id/janSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/febSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/marSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/aprSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/maySum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:singleLine="false"
+            android:maxLines="2" />
+
+        <TextView
+            android:id="@+id/junSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/julSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/augSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/sepSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/octSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/novSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/decSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

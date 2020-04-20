@@ -256,6 +256,25 @@ public class DatabaseManager extends SQLiteOpenHelper {
     }
 
     /**
+     * Gets the Cursor object for a specific year's items in the database.
+     * @param year  The year to search for
+     * @return      The cursor for a specific year's items
+     */
+    public Cursor getCursorForYear(int year) {
+        Cursor c = null;
+
+        try {
+
+            c = db.rawQuery("SELECT * FROM " + TABLE_NAME +
+                    " WHERE (year = " + year + ");", null);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return c;
+    }
+
+    /**
      * A method for deleting one database row based on an id.
      * @param ID    The id of the row to delete
      */
