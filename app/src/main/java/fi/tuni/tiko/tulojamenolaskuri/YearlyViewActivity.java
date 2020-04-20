@@ -24,6 +24,10 @@ import java.util.Calendar;
 
 /**
  * Used for displaying the yearly view for the income and expenses entry data.
+ *
+ * @author Olli Pertovaara
+ * @version 1.7
+ * @since   2020.04.20
  */
 public class YearlyViewActivity extends AppCompatActivity implements Runnable {
 

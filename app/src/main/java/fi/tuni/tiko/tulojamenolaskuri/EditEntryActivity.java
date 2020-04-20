@@ -14,6 +14,10 @@ import java.util.Calendar;
 
 /**
  * Activity for editing existing entry data and updating or removing the data.
+ *
+ * @author Olli Pertovaara
+ * @version 1.7
+ * @since   2020.04.20
  */
 public class EditEntryActivity extends AddNewActivity {
 

@@ -14,6 +14,10 @@ import java.util.Calendar;
  * This class manages the entry data database.
  * The month in this database is saved in the such a format
  * that January is 1 instead of 0.
+ *
+ * @author Olli Pertovaara
+ * @version 1.7
+ * @since   2020.04.20
  */
 public class DatabaseManager extends SQLiteOpenHelper {
 

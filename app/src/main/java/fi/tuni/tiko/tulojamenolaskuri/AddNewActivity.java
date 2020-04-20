@@ -21,6 +21,10 @@ import java.util.Locale;
 
 /**
  * This class is for showing add new income or expense entry activity.
+ *
+ * @author Olli Pertovaara
+ * @version 1.7
+ * @since   2020.04.20
  */
 public class AddNewActivity extends AppCompatActivity {
 

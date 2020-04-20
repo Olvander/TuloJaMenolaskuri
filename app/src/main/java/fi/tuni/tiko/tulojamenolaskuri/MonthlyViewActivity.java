@@ -27,6 +27,10 @@ import java.util.Locale;
 
 /**
  *  For displaying the monthly entry data.
+ *
+ * @author Olli Pertovaara
+ * @version 1.7
+ * @since   2020.04.20
  */
 public class MonthlyViewActivity extends AppCompatActivity {
 

@@ -14,6 +14,10 @@ import java.util.ArrayList;
 
 /**
  * Custom adapter needed for the RecyclerView of the Monthly View.
+ *
+ * @author Olli Pertovaara
+ * @version 1.7
+ * @since   2020.04.20
  */
 public class MyAdapter extends RecyclerView.Adapter<MonthlyViewViewHolder> {
 

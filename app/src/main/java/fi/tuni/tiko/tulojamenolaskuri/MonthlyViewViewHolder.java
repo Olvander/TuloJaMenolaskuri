@@ -7,6 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Custom view holder for the monthly entries view.
+ *
+ * @author Olli Pertovaara
+ * @version 1.7
+ * @since   2020.04.20
  */
 public class MonthlyViewViewHolder extends RecyclerView.ViewHolder {
 

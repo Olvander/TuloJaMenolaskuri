@@ -6,6 +6,10 @@ import java.util.Locale;
 /**
  * This class contains the entry data.
  * The month of the date is 1 less than the real month by default.
+ *
+ * @author Olli Pertovaara
+ * @version 1.7
+ * @since   2020.04.20
  */
 public class EntryData {
     /**

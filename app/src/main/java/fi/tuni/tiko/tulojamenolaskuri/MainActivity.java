@@ -10,6 +10,10 @@ import android.view.View;
 /**
  * The main activity that holds three buttons that can currently be used to
  * access the Add new entry activity and monthly view activity.
+ *
+ * @author Olli Pertovaara
+ * @version 1.7
+ * @since   2020.04.20
  */
 public class MainActivity extends AppCompatActivity {
 
