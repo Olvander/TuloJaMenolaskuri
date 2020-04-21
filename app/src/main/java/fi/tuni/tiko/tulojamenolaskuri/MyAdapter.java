@@ -21,10 +21,29 @@ import java.util.ArrayList;
  */
 public class MyAdapter extends RecyclerView.Adapter<MonthlyViewViewHolder> {
 
+    /**
+     * The model containing an EntryData arraylist.
+     */
     private ArrayList<EntryData> model;
+
+    /**
+     * An instance of DatabaseManager class.
+     */
     private DatabaseManager dbManager;
+
+    /**
+     * The year whose data should be displayed.
+     */
     private int year;
+
+    /**
+     * The month whose data should be displayed.
+     */
     private int month;
+
+    /**
+     * The activity context in which this instance was created.
+     */
     private Context context;
 
     /**
@@ -104,16 +123,5 @@ public class MyAdapter extends RecyclerView.Adapter<MonthlyViewViewHolder> {
         } else if (model.get(position).getSum().startsWith("-")) {
             holder.textView3.setTextColor(Color.parseColor("#ce2222"));
         }
-    }
-
-    public void add(EntryData entryData) {
-        model.add(entryData);
-        int position = model.size() - 1;
-        notifyItemInserted(position);
-    }
-    public void remove(EntryData entryData) {
-        int position = model.indexOf(entryData);
-        model.remove(position);
-        notifyItemRemoved(position);
     }
 }

@@ -39,6 +39,11 @@ public class DateSelectorFragment extends DialogFragment implements
     private DatePicker datePicker;
 
     /**
+     * A Calendar instance
+     */
+    private Calendar date;
+
+    /**
      * Constructor that initializes the context and a TextView
      * @param context   The context that this constructor was called from
      * @param dateText  A TextView that holds the date as text
@@ -76,6 +81,13 @@ public class DateSelectorFragment extends DialogFragment implements
             month = datePicker.getMonth();
             day = datePicker.getDayOfMonth();
         }
+
+        if (date != null) {
+            year = date.get(Calendar.YEAR);
+            month = date.get(Calendar.MONTH);
+            day = date.get(Calendar.DAY_OF_MONTH);
+        }
+
         return new DatePickerDialog(getActivity(), R.style.CalendarTheme, this,
                 year, month, day);
     }
@@ -102,5 +114,14 @@ public class DateSelectorFragment extends DialogFragment implements
                 month, year);
         this.dateText.setText(formattedDate);
         ((AddNewActivity) context).setDate(c);
+    }
+
+    /**
+     * Used for setting date when coming from EditEntryActivity.
+     *
+     * @param date  The Calendar instance to be set as the date.
+     */
+    public void setDate(Calendar date) {
+        this.date = date;
     }
 }

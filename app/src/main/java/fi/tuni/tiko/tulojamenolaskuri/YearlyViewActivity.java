@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * Used for displaying the yearly view for the income and expenses entry data.
@@ -253,12 +254,12 @@ public class YearlyViewActivity extends AppCompatActivity implements Runnable {
      */
     public void setMonthlySum(double sum, int month) {
         TextView tv = monthlySums.get(month);
-        String sumText = "";
+        String sumText = String.format(Locale.US, "%.2f", sum);
+
         if (sum >= 0) {
-            sumText = "+" + sum;
-        } else {
-            sumText = sum + "";
+            sumText = "+" + sumText;
         }
+
         tv.setText(sumText);
     }
 

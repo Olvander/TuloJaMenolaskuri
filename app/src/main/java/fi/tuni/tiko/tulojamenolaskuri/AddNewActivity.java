@@ -33,7 +33,7 @@ public class AddNewActivity extends AppCompatActivity {
      *
      * Used for displaying a Date Picker Dialog.
      */
-    private DateSelectorFragment dateSelector;
+    protected DateSelectorFragment dateSelector;
 
     /**
      * A TextView to hold the current or selected date.
@@ -349,7 +349,7 @@ public class AddNewActivity extends AppCompatActivity {
             dateSelector = new DateSelectorFragment(this, dateText);
         }
         dateSelector.showDialog();
-    }
+}
 
     /**
      * Proceeds to monthly activity.

@@ -93,6 +93,18 @@ public class EditEntryActivity extends AddNewActivity {
     }
 
     /**
+     * Show DatePickerDialog when Choose date has been pressed
+     * @param v The view whose onclick method was called
+     */
+    public void onSetDatePressed(View v) {
+        if (dateSelector == null) {
+            dateSelector = new DateSelectorFragment(this, dateText);
+            dateSelector.setDate(getDate());
+        }
+        dateSelector.showDialog();
+    }
+
+    /**
      * Remove the entry with the ID given in the Intent.
      * @param v The remove entry button.
      */

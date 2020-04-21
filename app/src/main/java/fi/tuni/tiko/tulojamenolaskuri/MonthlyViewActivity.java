@@ -138,12 +138,13 @@ public class MonthlyViewActivity extends AppCompatActivity {
      */
     public void setMonthlyTotal() {
         double sum = dbManager.getSumOfMonthlyItems(year, month + 1);
-        String sumAsText = "" + sum;
+        String sumText = String.format(Locale.US, "%.2f", sum);
+        String sumAsText = "" + sumText;
 
         if (sum > 0) {
-            sumAsText = "Yhteensä: +" + sum + " €";
+            sumAsText = "Yhteensä: +" + sumAsText + " €";
         } else {
-            sumAsText = "Yhteensä: " + sum + " €";
+            sumAsText = "Yhteensä: " + sumAsText + " €";
         }
         monthlyTotal.setText(sumAsText);
         setMonthlyTotalColor(sumAsText);
