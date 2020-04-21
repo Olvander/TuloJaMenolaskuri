@@ -8,8 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 /**
- * The main activity that holds three buttons that can currently be used to
- * access the Add new entry activity and monthly view activity.
+ * The main activity that is used to proceed to other activities.
  *
  * @author Olli Pertovaara
  * @version 1.7
